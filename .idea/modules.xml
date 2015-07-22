@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/VotingApp/VotingApp.iml" filepath="$PROJECT_DIR$/VotingApp/VotingApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bookstore/bookstore.iml" filepath="$PROJECT_DIR$/../bookstore/bookstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-dependency-injection/spring-dependency-injection.iml" filepath="$PROJECT_DIR$/../spring-dependency-injection/spring-dependency-injection.iml" />
     </modules>
   </component>
 </project>

@@ -1,30 +1,51 @@
 package com.nrnca.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by shrestar on 2015-06-22.
  */
 @Entity
 @Table(name="CONTACT")
-public class Contact {
+public class Contact implements Serializable{
 
     @Id
     @Column(name = "CONTACT_ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableGenerator(name = "contact_gen", table = "SEQ_ID_POOL", pkColumnName = "POOL_ID", pkColumnValue = "1", valueColumnName = "SEQ_ID", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "contact_gen")
     private int id;
-
+    @Column(name = "FIRST_NAME",length = 45)
     private String firstName;
-
+    @Column(name = "MIDDLE_NAME",length = 45)
     private String middleName;
-
+    @Column(name="LAST_NAME",length = 45)
     private String lastName;
-
+    @Column(name = "EMAIL", length = 45)
     private String email;
-
-    private int phone;
-
+    @Column(name="PHONE",precision = 11)
+    private Long phone;
+    @Column(name = "POSTAL_CODE", length = 45)
     private String postalCode;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "contact")
+    private Set<Candidate> candidates = new HashSet<Candidate>(0);
+
+    public Contact() {
+
+    }
+
+    public Contact(String firstName, String middleName, String lastName, String email, Long phone, String postalCode, Set<Candidate> candidates) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.postalCode = postalCode;
+        this.candidates = candidates;
+    }
 
     public int getId() {
         return id;
@@ -35,7 +56,7 @@ public class Contact {
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -66,11 +87,11 @@ public class Contact {
         this.email = email;
     }
 
-    public int getPhone() {
+    public Long getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(Long phone) {
         this.phone = phone;
     }
 
@@ -80,6 +101,14 @@ public class Contact {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public Set<Candidate> getCandidates() {
+        return candidates;
+    }
+
+    public void setCandidates(Set<Candidate> candidates) {
+        this.candidates = candidates;
     }
 
     @Override

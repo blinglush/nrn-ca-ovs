@@ -9,7 +9,7 @@
 <div>
     <fieldset>
 
-        <div>${message}</div>
+        <#--<div>${message}</div>-->
     <form name="employee" action="save" method="post">
         Firstname: <input type="text" name="name" />	<br/>
         Salary: <input type="text" name="salary" />	<br/>

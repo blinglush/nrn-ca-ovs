@@ -34,7 +34,7 @@ public class EmployeeController {
     private final static Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/addemployee/save", method = RequestMethod.POST)
     public String saveEmployee(@ModelAttribute("employee") Employee employee, BindingResult result) {
 
         logger.debug("adding employee");
@@ -62,12 +62,14 @@ public class EmployeeController {
         return "/addemployee";
     }
 
-//    @RequestMapping(value = "/addemployee")
+    @RequestMapping(value = "/addemployee")
     public String index(@ModelAttribute("model") ModelMap model) {
+        model.addAttribute("message", "add employee ");
 
-        logger.debug( "/addemployee index called");
 
-        return "/emp/addemployee";
+        logger.debug("/addemployee index called");
+
+        return "/addemployee";
     }
 
 }

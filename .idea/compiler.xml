@@ -26,11 +26,13 @@
         <processorPath useClasspath="true" />
         <module name="bookstore" />
         <module name="nrn-ca-ovs" />
+        <module name="spring-dependency-injection" />
         <module name="VotingApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="VotingApp" target="1.7" />
+      <module name="VotingApp (1)" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

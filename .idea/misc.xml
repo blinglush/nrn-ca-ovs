@@ -36,15 +36,17 @@
     <file type="web" url="file://$PROJECT_DIR$/../bookstore" />
     <file type="web" url="file://$PROJECT_DIR$/../bookstore-master" />
     <file type="web" url="file://$PROJECT_DIR$/VotingApp" />
+    <file type="web" url="file://$PROJECT_DIR$/../svnproj/repos-1/trunk/VotingApp" />
   </component>
   <component name="IdProvider" IDEtalkID="90757BB7E4B72D9153D82D4217FF2D89" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/VotingApp/pom.xml" />
         <option value="$PROJECT_DIR$/../bookstore-master/pom.xml" />
         <option value="$PROJECT_DIR$/../bookstore/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-dependency-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/VotingApp/pom.xml" />
       </list>
     </option>
   </component>
@@ -173,6 +175,9 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />

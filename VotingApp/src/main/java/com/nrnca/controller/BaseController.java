@@ -13,6 +13,7 @@ public class BaseController {
 	private static int counter = 0;
 	private static final String VIEW_INDEX = "index1";
 	private final static org.slf4j.Logger logger = LoggerFactory.getLogger(BaseController.class);
+	private static final String ADMIN_PAGE = "admin/administration";
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
@@ -35,5 +36,7 @@ public class BaseController {
 		return VIEW_INDEX;
 
 	}
+
+
 
 }
